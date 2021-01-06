@@ -1,0 +1,3 @@
+During the creation phase, the `logger` function declaration gets hoisted to the top of the `deBugIt` function scope. In it, a closure is created that knows about a variable named `status`, the `const` variable which was also hoisted but currently has no value. Since `status` gets initialized on line 2, it DOES have a value by the time the `logger` function is invoked online 7 and so the evaluation of `status` in the call to `console.log` will return `'debugging`A.'`
+
+If the `status` variable wasn't initialized until after the `logger` invocation, an error would be raised since `status` would have no value (not even `undefined`)

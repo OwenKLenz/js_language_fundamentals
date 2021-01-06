@@ -1,0 +1,3 @@
+It logs 40 and 45.
+
+The reason this might appear odd is that you might expect the `totalPayable` function to record the starting value of `startingBalance` as it was at the location in the code (line 5) where the function declaration is written. In reality, when this code is run, the function declaration is "hoisted" to the top of the current scope (global in this case) and given a closure that contains a pointer to all of the variables in scope where the function was declared. This includes `startingBalance`. This means that when startingBalance is reassigned on line 9 and line 12, totalPayable is aware of the change thanks to its closure. 

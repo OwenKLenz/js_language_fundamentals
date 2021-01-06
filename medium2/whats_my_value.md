@@ -1,0 +1,3 @@
+An array's length property is derived from the value of the highest integer index in the array greater than 0. It is set to that value + 1. In the array in question, it is initialized with 3 elements at indexes 0, 1 and 2. This means it has a length of 3. The other "element assignments" that occurs on lines 3 and 7 aren't using positive integer values (they instead use "indexes" of a float and a negative integer). As a result, those wind up being key-value pairs in the Array object instead of indexed values. This means that the length never changes.
+
+the indexes and the keys associated with each new property are all returned by the `Object.keys` method, so the lengths logged on lines 5 and 9 will increase accordingly (4 and 5).

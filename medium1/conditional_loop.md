@@ -1,0 +1,1 @@
+The code will log 0 infinitely. `0 % 3` is 0, so the if branch of the conditional will execute, logging 0 and then we continue on to the next ieration of the loop without incrementing `i`, log 0 again and so on.
